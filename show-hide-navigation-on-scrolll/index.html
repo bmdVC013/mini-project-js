@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disappearing Navigation Bar on Scroll UP and Display it when Scroll Down</title>
+  <style>
+    body {
+      --nav-height: 50px;
+
+      padding-top: var(--nav-height);
+      height: 200vh;
+    }
+
+    .nav {
+      width: 100%;
+      height: var(--nav-height);
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #009578;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+    }
+
+    .nav--hidden {
+      transform: translateY(calc(-1 * var(--nav-height)));
+      box-shadow: none;
+    }
+
+    .nav__link {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav id="nav" class="nav">
+    <a href="#" class="nav__link">Home</a>
+    <a href="#" class="nav__link">About</a>
+    <a href="#" class="nav__link">Contact</a>
+  </nav>
+
+  <script>
+    // Enable hidden nav bar
+    {
+      const nav = document.getElementById('nav');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', (e) => {
+        if (lastScrollY < window.scrollY) {
+          nav.classList.add("nav--hidden");
+        } else {
+          nav.classList.remove("nav--hidden");
+        }
+        
+        lastScrollY = window.scrollY
+      });
+
+    }
+  </script>
+</body>
+</html>
