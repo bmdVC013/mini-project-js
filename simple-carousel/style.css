@@ -1,0 +1,41 @@
+.carousel {
+  position: relative;
+}
+
+.carousel__item {
+  display: none;
+  height: 500px;
+  background: grey;
+  padding: 1em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #fff;
+}
+
+.carousel__item--select {
+  display: block;
+}
+
+.carousel__nav {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel__button--select {
+  background: rgba(255, 255, 255, 0.5);
+}
