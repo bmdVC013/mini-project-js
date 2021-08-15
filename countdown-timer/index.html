@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day Until - Countdown Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="myCountdown" class="until">
+    <div class="until__component">
+      <div class="until__numeric until__numeric--days">00</div>
+      <div class="until__unit">Days</div>
+    </div>
+
+    <div class="until__component">
+      <div class="until__numeric until__numeric--hours">00</div>
+      <div class="until__unit">Hours</div>
+    </div>
+
+    <div class="until__component">
+      <div class="until__numeric until__numeric--minutes">00</div>
+      <div class="until__unit">Minutes</div>
+    </div>
+
+    <div class="until__component">
+      <div class="until__numeric until__numeric--seconds">00</div>
+      <div class="until__unit">Seconds</div>
+    </div>
+
+    <div class="until__event">
+      Until
+      <span id="dateUntil" class="until__event--time">25 December 2021</span>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/plugin/duration.min.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
