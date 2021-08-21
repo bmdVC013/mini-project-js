@@ -1,0 +1,23 @@
+.table {
+  width: 500px;
+}
+
+.table thead {
+  background-color: #009875;
+  color: #fff;
+  font-size: 20px;
+}
+
+.table thead th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.table tbody {
+  background-color: #fafafa;
+}
+
+.table tbody td {
+  padding: 8px;
+
+}
